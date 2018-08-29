@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="375.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ivnqm2mvcstopwatchfxml.FXMLDocumentController">
+    <children>
+        <Button fx:id="recordReset" layoutX="532.0" layoutY="299.0" onAction="#handleRecordReset" prefWidth="128.0" style="-fx-background-color: blue;" text="Record" textFill="WHITE" />
+      <Button fx:id="startStop" layoutX="373.0" layoutY="299.0" onAction="#handleStartStop" prefWidth="128.0" style="-fx-background-color: green;" text="Start" textFill="WHITE" />
+      <ImageView fitHeight="283.0" fitWidth="278.0" layoutX="48.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@clockface.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="handImageView" fitHeight="278.0" fitWidth="302.0" layoutX="48.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@hand.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="417.0" layoutY="120.0" text="Lap 1:" />
+      <Label layoutX="417.0" layoutY="168.0" text="Lap 2:" />
+      <Label layoutX="417.0" layoutY="214.0" text="Lap 3:" />
+      <Text fx:id="digitalClock" layoutX="448.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00.00" textAlignment="RIGHT" wrappingWidth="148.03125">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text fx:id="lap1Text" layoutX="509.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00.00" textAlignment="RIGHT" />
+      <Text fx:id="lap2Text" layoutX="509.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00.00" textAlignment="RIGHT" />
+      <Text fx:id="lap3Text" layoutX="509.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00.00" textAlignment="RIGHT" />
+    </children>
+</AnchorPane>

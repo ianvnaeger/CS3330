@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Ivnqm2MVCStopwatchFXML.jnlp">
+  <information>
+    <title>Ivnqm2MVCStopwatchFXML</title>
+    <vendor>ianvn</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Ivnqm2MVCStopwatchFXML.jar" size="22063" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Ivnqm2MVCStopwatchFXML" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="ivnqm2mvcstopwatchfxml.Ivnqm2MVCStopwatchFXML"  name="Ivnqm2MVCStopwatchFXML" />
+  <update check="always"/>
+</jnlp>

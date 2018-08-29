@@ -1,0 +1,89 @@
+@startuml
+abstract class ivnqm2musicgenerator.MusicGeneratorSong
+annotation java.lang.Override
+annotation javafx.fxml.FXML
+class ivnqm2musicgenerator.Controller
+class ivnqm2musicgenerator.GeneratedSong
+class ivnqm2musicgenerator.Ivnqm2MusicGenerator
+class ivnqm2musicgenerator.Model
+class ivnqm2musicgenerator.PreMadeSong
+class java.beans.PropertyChangeEvent
+class java.beans.PropertyChangeSupport
+class java.io.File
+class java.io.FileWriter
+class java.io.PrintWriter
+class java.net.URL
+class java.util.ArrayList
+class java.util.HashMap
+class java.util.Map
+class java.util.Random
+class java.util.ResourceBundle
+class java.util.Scanner
+class javafx.application.Application
+class javafx.concurrent.Task
+class javafx.event.ActionEvent
+class javafx.fxml.FXMLLoader
+class javafx.scene.Parent
+class javafx.scene.Scene
+class javafx.scene.control.ComboBox
+class javafx.scene.control.Label
+class javafx.scene.control.TabPane
+class javafx.scene.control.TextField
+class javafx.scene.layout.AnchorPane
+class javafx.scene.shape.Ellipse
+class javafx.stage.Stage
+class javax.sound.midi.Instrument
+class javax.sound.midi.MidiChannel
+class javax.sound.midi.MidiSystem
+class javax.sound.midi.MidiUnavailableException
+class javax.sound.midi.Synthesizer
+enum ivnqm2musicgenerator.Note
+interface ivnqm2musicgenerator.Song
+interface java.beans.PropertyChangeListener
+interface javafx.fxml.Initializable
+ivnqm2musicgenerator.MusicGeneratorSong ..> java.lang.Override
+ivnqm2musicgenerator.MusicGeneratorSong ..> java.util.Scanner
+ivnqm2musicgenerator.MusicGeneratorSong ..> javax.sound.midi.Instrument
+ivnqm2musicgenerator.MusicGeneratorSong ..> javax.sound.midi.MidiChannel
+ivnqm2musicgenerator.MusicGeneratorSong ..> javax.sound.midi.MidiSystem
+ivnqm2musicgenerator.MusicGeneratorSong ..> javax.sound.midi.MidiUnavailableException
+ivnqm2musicgenerator.MusicGeneratorSong ..> javax.sound.midi.Synthesizer
+ivnqm2musicgenerator.MusicGeneratorSong --|> ivnqm2musicgenerator.Song
+ivnqm2musicgenerator.Controller ..> java.lang.Override
+ivnqm2musicgenerator.Controller ..> javafx.fxml.FXML
+ivnqm2musicgenerator.Controller ..> java.beans.PropertyChangeEvent
+ivnqm2musicgenerator.Controller ..> java.net.URL
+ivnqm2musicgenerator.Controller ..> java.util.ArrayList
+ivnqm2musicgenerator.Controller ..> java.util.ResourceBundle
+ivnqm2musicgenerator.Controller ..> javafx.event.ActionEvent
+ivnqm2musicgenerator.Controller ..> javafx.scene.control.ComboBox
+ivnqm2musicgenerator.Controller ..> javafx.scene.control.Label
+ivnqm2musicgenerator.Controller ..> javafx.scene.control.TabPane
+ivnqm2musicgenerator.Controller ..> javafx.scene.control.TextField
+ivnqm2musicgenerator.Controller ..> javafx.scene.layout.AnchorPane
+ivnqm2musicgenerator.Controller ..> javafx.scene.shape.Ellipse
+ivnqm2musicgenerator.Controller --|> java.beans.PropertyChangeListener
+ivnqm2musicgenerator.Controller --|> javafx.fxml.Initializable
+ivnqm2musicgenerator.GeneratedSong --|> ivnqm2musicgenerator.MusicGeneratorSong
+ivnqm2musicgenerator.GeneratedSong ..> java.lang.Override
+ivnqm2musicgenerator.GeneratedSong ..> java.io.FileWriter
+ivnqm2musicgenerator.GeneratedSong ..> java.io.PrintWriter
+ivnqm2musicgenerator.GeneratedSong ..> java.util.Random
+ivnqm2musicgenerator.Ivnqm2MusicGenerator ..> java.lang.Override
+ivnqm2musicgenerator.Ivnqm2MusicGenerator --|> javafx.application.Application
+ivnqm2musicgenerator.Ivnqm2MusicGenerator ..> javafx.fxml.FXMLLoader
+ivnqm2musicgenerator.Ivnqm2MusicGenerator ..> javafx.scene.Parent
+ivnqm2musicgenerator.Ivnqm2MusicGenerator ..> javafx.scene.Scene
+ivnqm2musicgenerator.Ivnqm2MusicGenerator ..> javafx.stage.Stage
+ivnqm2musicgenerator.Model ..> java.lang.Override
+ivnqm2musicgenerator.Model ..> java.beans.PropertyChangeSupport
+ivnqm2musicgenerator.Model ..> java.io.File
+ivnqm2musicgenerator.Model ..> java.util.ArrayList
+ivnqm2musicgenerator.Model ..> java.util.Scanner
+ivnqm2musicgenerator.Model ..> javafx.concurrent.Task
+ivnqm2musicgenerator.Model ..> java.beans.PropertyChangeListener
+ivnqm2musicgenerator.PreMadeSong --|> ivnqm2musicgenerator.MusicGeneratorSong
+ivnqm2musicgenerator.PreMadeSong ..> java.lang.Override
+ivnqm2musicgenerator.Note ..> java.util.HashMap
+ivnqm2musicgenerator.Note ..> java.util.Map
+@enduml

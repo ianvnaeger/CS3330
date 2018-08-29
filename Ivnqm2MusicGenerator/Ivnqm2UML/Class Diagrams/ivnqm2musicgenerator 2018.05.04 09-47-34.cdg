@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ivnqm2musicgenerator">
+  <ClassDiagramComponents>
+    <Class name="Controller" package="ivnqm2musicgenerator" visibility="public" xPosition="112.0" yPosition="68.0">
+      <Fields>
+        <Field name="songMenu" type="ComboBox" visibility="private"/>
+        <Field name="generatedLabel" type="Label" visibility="private"/>
+        <Field name="songNameTextField" type="TextField" visibility="private"/>
+        <Field name="mainTabs" type="TabPane" visibility="private"/>
+        <Field name="aboutAnchor" type="AnchorPane" visibility="private"/>
+        <Field name="thePane" type="AnchorPane" visibility="private"/>
+        <Field name="lowCNote" type="Ellipse" visibility="public"/>
+        <Field name="dNote" type="Ellipse" visibility="public"/>
+        <Field name="eNote" type="Ellipse" visibility="public"/>
+        <Field name="fNote" type="Ellipse" visibility="public"/>
+        <Field name="gNote" type="Ellipse" visibility="public"/>
+        <Field name="aNote" type="Ellipse" visibility="public"/>
+        <Field name="bNote" type="Ellipse" visibility="public"/>
+        <Field name="highCNote" type="Ellipse" visibility="public"/>
+        <Field name="model" type="Model" visibility="package"/>
+        <Field name="UIArrayList" type="ArrayList&lt;MusicGeneratorSong&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="playButtonPress" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="generateButtonPress" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="switchScenes" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="switchBack" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="changeNote" returnType="void" visibility="public">
+          <Argument type="Integer" name="notePlaying"/>
+        </Method>
+        <Method name="changeBack" returnType="void" visibility="public">
+          <Argument type="Integer" name="notePlaying"/>
+        </Method>
+        <Method name="propertyChange" returnType="void" visibility="public">
+          <Argument type="PropertyChangeEvent" name="evt"/>
+        </Method>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="GeneratedSong" package="ivnqm2musicgenerator" visibility="public" xPosition="464.0" yPosition="248.0">
+      <Fields>
+        <Field name="numberOfGeneratedSongs" type="int" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="givenTitle"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="printInfo" returnType="void" visibility="public"/>
+        <Method name="generateSong" returnType="void" visibility="public">
+          <Argument type="String" name="givenTitle"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ivnqm2MusicGenerator" package="ivnqm2musicgenerator" visibility="public" xPosition="430.0" yPosition="68.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Model" package="ivnqm2musicgenerator" visibility="public" xPosition="726.0" yPosition="31.0">
+      <Fields>
+        <Field name="file" type="File" visibility="private" isFinal="true"/>
+        <Field name="songArrayList" type="ArrayList&lt;MusicGeneratorSong&gt;" visibility="public"/>
+        <Field name="propertyChangeSupport" type="PropertyChangeSupport" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="findSongByName" returnType="MusicGeneratorSong" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="playSong" returnType="void" visibility="public">
+          <Argument type="MusicGeneratorSong" name="selected"/>
+          <Argument type="Model" name="model"/>
+        </Method>
+        <Method name="generateNewSong" returnType="void" visibility="public">
+          <Argument type="String" name="givenTitle"/>
+        </Method>
+        <Method name="getArrayList" returnType="ArrayList" visibility="public"/>
+        <Method name="triggerChangeNote" returnType="void" visibility="public">
+          <Argument type="Note" name="selectedNote"/>
+        </Method>
+        <Method name="triggerChangeBack" returnType="void" visibility="public">
+          <Argument type="Note" name="selectedNote"/>
+        </Method>
+        <Method name="addPropertyChangeListener" returnType="void" visibility="public">
+          <Argument type="PropertyChangeListener" name="listener"/>
+        </Method>
+        <Method name="removePropertyChangeListener" returnType="void" visibility="public">
+          <Argument type="PropertyChangeListener" name="listener"/>
+        </Method>
+        <Method name="firePropertyChange" returnType="void" visibility="protected">
+          <Argument type="Note" name="selectedNote"/>
+          <Argument type="boolean" name="onOff"/>
+        </Method>
+        <Method name="readFile" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="MusicGeneratorSong" package="ivnqm2musicgenerator" visibility="public" isAbstract="true" xPosition="696.0" yPosition="461.0">
+      <Fields>
+        <Field name="title" type="String" visibility="package"/>
+        <Field name="music" type="Note[]" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="String" name="title"/>
+          <Argument type="String" name="music"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="play" returnType="void" visibility="public">
+          <Argument type="Model" name="model"/>
+        </Method>
+        <Method name="printInfo" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="PreMadeSong" package="ivnqm2musicgenerator" visibility="public" xPosition="1146.0" yPosition="498.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="String" name="title"/>
+          <Argument type="String" name="music"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="printInfo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Song" package="ivnqm2musicgenerator" visibility="public" xPosition="1254.0" yPosition="345.0">
+      <Methods>
+        <Method name="play" returnType="void" visibility="package">
+          <Argument type="Model" name="model"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Enum name="Note" package="ivnqm2musicgenerator" visibility="public" xPosition="1256.0" yPosition="31.0">
+      <Literals>
+        <Literal name="C"/>
+        <Literal name="D"/>
+        <Literal name="E"/>
+        <Literal name="F"/>
+        <Literal name="G"/>
+        <Literal name="A"/>
+        <Literal name="B"/>
+        <Literal name="Ch"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="model" source="ivnqm2musicgenerator.Controller" target="ivnqm2musicgenerator.Model" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ivnqm2musicgenerator.MusicGeneratorSong" target="ivnqm2musicgenerator.Song"/>
+    <HasRelation name="songArrayList" source="ivnqm2musicgenerator.Model" target="ivnqm2musicgenerator.MusicGeneratorSong" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;MusicGeneratorSong&gt;"/>
+    <HasRelation name="UIArrayList" source="ivnqm2musicgenerator.Controller" target="ivnqm2musicgenerator.MusicGeneratorSong" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;MusicGeneratorSong&gt;"/>
+    <UseRelation source="ivnqm2musicgenerator.Song" target="ivnqm2musicgenerator.Model" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="ivnqm2musicgenerator.PreMadeSong" target="ivnqm2musicgenerator.MusicGeneratorSong"/>
+    <UseRelation source="ivnqm2musicgenerator.Model" target="ivnqm2musicgenerator.Note" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="ivnqm2musicgenerator.GeneratedSong" target="ivnqm2musicgenerator.MusicGeneratorSong"/>
+    <UseRelation source="ivnqm2musicgenerator.Model" target="ivnqm2musicgenerator.Song" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ivnqm2musicgenerator.MusicGeneratorSong" target="ivnqm2musicgenerator.Model" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
